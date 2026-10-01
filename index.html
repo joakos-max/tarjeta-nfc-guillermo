@@ -884,9 +884,9 @@
       const qrImg = document.getElementById('qrImage');
       const currentUrl = window.location.protocol.startsWith('http') 
         ? window.location.href 
-        : `https://wa.me/${SANTA_CONFIG.whatsapp}`;
+        : 'https://tarjeta-nfc-guillermo.vercel.app';
       
-      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(currentUrl)}&color=0B1E14&bgcolor=FFFFFF&margin=2`;
+      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=${encodeURIComponent(currentUrl)}&color=0B1E14&bgcolor=FFFFFF&margin=2`;
       qrImg.src = qrApiUrl;
     }
 
@@ -894,9 +894,9 @@
     async function downloadQRCode() {
       const currentUrl = window.location.protocol.startsWith('http') 
         ? window.location.href 
-        : `https://wa.me/${SANTA_CONFIG.whatsapp}`;
+        : 'https://tarjeta-nfc-guillermo.vercel.app';
       
-      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${encodeURIComponent(currentUrl)}&color=0B1E14&bgcolor=FFFFFF&margin=2`;
+      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=1200x1200&data=${encodeURIComponent(currentUrl)}&color=0B1E14&bgcolor=FFFFFF&margin=2`;
       
       try {
         const response = await fetch(qrApiUrl);
