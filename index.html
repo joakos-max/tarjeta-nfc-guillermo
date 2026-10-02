@@ -162,12 +162,6 @@
         <i data-lucide="snowflake" class="w-3.5 h-3.5"></i>
         <span id="snowBtnText">Nieve ON</span>
       </button>
-      
-      <!-- Botón para ver la Tarjeta Física -->
-      <button onclick="toggleReferenceModal()" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#103022]/90 border border-[#D4AF37]/30 text-[#E7C976] hover:bg-[#16422F] transition-all text-[11px] shadow-sm active:scale-95" title="Ver Diseño de la Tarjeta Física">
-        <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
-        <span>Tarjeta Física</span>
-      </button>
     </div>
   </header>
 
@@ -227,7 +221,7 @@
 
       <!-- Subtexto sutil del personaje -->
       <p class="text-[12px] text-[#A6C4B4] mt-1 font-medium italic">
-        "Llevando la magia, ilusión y alegría de la Navidad a tu hogar"
+        "Llevando la magia, ilusión y alegría de la Navidad a tu vida"
       </p>
 
       <!-- Estado de disponibilidad y reservas -->
@@ -635,26 +629,6 @@
     </div>
   </div>
 
-  <!-- MODAL DE VISUALIZACIÓN DE LA TARJETA FÍSICA -->
-  <div id="referenceModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4" onclick="closeModalOnOutsideClick(event, 'referenceModal')">
-    <div class="bg-[#0C2419] rounded-3xl p-5 max-w-sm w-full text-center border-2 border-[#D4AF37] shadow-2xl relative text-white">
-      <button onclick="toggleReferenceModal()" class="absolute top-4 right-4 text-[#A6C4B4] hover:text-[#FDE8A5] p-1.5 rounded-full hover:bg-[#163E2B]">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-
-      <h3 class="font-cinzel text-xs tracking-wider text-[#FDE8A5] uppercase mb-2">Diseño de la Tarjeta Física</h3>
-      <p class="text-[11px] text-[#A6C4B4] mb-3">En el espacio de datos de esta tarjeta es donde irá impreso el código QR generado:</p>
-
-      <div class="rounded-xl overflow-hidden border border-[#D4AF37]/40 shadow-lg">
-        <img src="card_reference.jpg" alt="Diseño de Tarjeta Física" class="w-full h-auto object-cover" />
-      </div>
-
-      <p class="text-[10px] text-[#8EB8A1] mt-3">
-        El estilo visual de esta interfaz fue diseñado para hacer juego perfecto con esta tarjeta.
-      </p>
-    </div>
-  </div>
-
   <!-- AVISO TOAST FLOTANTE -->
   <div id="toast" class="fixed bottom-6 bg-[#081B12] text-[#FDE8A5] border border-[#D4AF37] text-xs px-4 py-2.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-opacity duration-300 z-50 flex items-center gap-2">
     <i data-lucide="check" class="w-4 h-4 text-[#25D366]"></i>
@@ -867,11 +841,6 @@
       } else {
         modal.classList.add('hidden');
       }
-    }
-
-    function toggleReferenceModal() {
-      const modal = document.getElementById('referenceModal');
-      modal.classList.toggle('hidden');
     }
 
     function closeModalOnOutsideClick(e, modalId) {
